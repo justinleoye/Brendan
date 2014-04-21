@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Generator" content="ZDCMS 1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Kinect for windows微软中国体感大赛官方网站</title>
+<meta name="keywords" content="kinect,kinect for windws,微软kinect,kincet比赛,kinect游戏,kinect 游戏，Kinect for windows微软中国体感大赛官方网站,K4W.cn">
+<meta name="description" content="微软中国kinect体感应用开发、Kinect for windows微软中国kinect开发大赛官方报名网站-K4W.cn。咨询电话：4001-546328">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link href="/Tpl/Default/css/css.css" rel="stylesheet" type="text/css" />
+<meta property="qc:admins" content="15610626766347636" />
+<meta property="wb:webmaster" content="984be1dc6954bf0d" />
+<script src="/Tpl/Default/js/jquery.js"></script>
+<script src="/Tpl/Default/js/jquery.soChange.js"></script>
+<script type="text/javascript">
+(function($){
+
+	$.fn.myScroll = function(options){
+	//默认配置
+	var defaults = {
+		speed:40,  //滚动速度,值越大速度越慢
+		rowHeight:24 //每行的高度
+	};
+	
+	var opts = $.extend({}, defaults, options),intId = [];
+	
+	function marquee(obj, step){
+	
+		obj.find("ul").animate({
+			marginTop: '-=1'
+		},0,function(){
+				var s = Math.abs(parseInt($(this).css("margin-top")));
+				if(s >= step){
+					$(this).find("li").slice(0, 1).appendTo($(this));
+					$(this).css("margin-top", 0);
+				}
+			});
+		}
+		
+		this.each(function(i){
+			var sh = opts["rowHeight"],speed = opts["speed"],_this = $(this);
+			intId[i] = setInterval(function(){
+				if(_this.find("ul").height()<=_this.height()){
+					clearInterval(intId[i]);
+				}else{
+					marquee(_this, sh);
+				}
+			}, speed);
+
+			_this.hover(function(){
+				clearInterval(intId[i]);
+			},function(){
+				intId[i] = setInterval(function(){
+					if(_this.find("ul").height()<=_this.height()){
+						clearInterval(intId[i]);
+					}else{
+						marquee(_this, sh);
+					}
+				}, speed);
+			});
+		
+		});
+
+	}
+
+})(jQuery);
+
+$(function(){
+
+	$("div.ranklist").myScroll({
+		speed:40,
+		rowHeight:31
+	});
+	
+});
+</script>
+</head>
+<body>
+<div id="main">
+
+<div class="header">
+  <p class="t">Just in  Action ,欢迎你！<a href="/zone/index.html">个人中心</a>|<a href="/user/logoout.html">注销</a>|</p>
+</div>
+  <div id="header">
+   <div class="top">
+      <a href="/"><img src="/Tpl/Default/images/logo.jpg" class="logo" /></a>
+      <div class="top_right">
+        <div class="top_box"><img src="/Tpl/Default/images/dh.jpg" /></div>
+        <div class="top_nav">
+           <ul class="sddm">
+           <li><a href="/" class="a">首 页</a>
+                                                                  <li><a href="/news/1.html" class="a" onmouseover="mopen('m1')" onmouseout="mclosetime()">比赛详情</a>
+                                            <div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                                                            <p><a href="/news/1.html#tag0">大赛说明</a></p>
+                                                    <p><a href="/news/1.html#tag1">大赛流程</a></p>
+                                                    <p><a href="/news/1.html#tag2">奖项设置</a></p>
+                                                    <p><a href="/news/1.html#tag3">网络人气评选说明</a></p>
+                          
+                                              </div>
+                                        </li>
+                                                      <li><a href="/news/shijue.html" class="a" onmouseover="mopen('m2')" onmouseout="mclosetime()">新闻动态</a>
+                                            <div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                                                                          <p><a href="/news/shijue.html">新闻动态</a></p>
+                                                  <p><a href="/info/41.html">精彩回顾</a></p>
+                                                                      </div>
+                                        </li>
+                                                      <li><a href="/news/14.html" class="a" onmouseover="mopen('m3')" onmouseout="mclosetime()">视频中心</a>
+                                        </li>
+                                                      <li><a href="/news/32.html" class="a" onmouseover="mopen('m4')" onmouseout="mclosetime()">Q&A</a>
+                                        </li>
+                                                      <li><a href="/news/33.html" class="a" onmouseover="mopen('m5')" onmouseout="mclosetime()">资源下载</a>
+                                        </li>
+                                                      <li><a href="/info/34.html" class="a" onmouseover="mopen('m6')" onmouseout="mclosetime()">联系我们</a>
+                                        </li>
+                                          
+              </ul>
+           <a href="http://social.msdn.microsoft.com/Forums/zh-CN/home?forum=k4wdevelopment" class="forum" target="_blank">MSDN论坛</a>
+        </div>
+      </div>
+   </div>
+  </div>
+  <div id="content">
+   <div class="bj1">
+     <div class="login_box">
+       <h1 class="t">新用户注册</h1>
+       <div class="login_div">
+         <div class="login_left">
+          <form action="/user/insert.html" method="post" class="registerform">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">
+              <tr>
+                <td width="25%" height="35" align="right"><span class="c_ff0103">*</span>Email：</td>
+                <td height="35" colspan="2"><input type="text" value="" name="mail" class="table_text" datatype="e" ajaxurl="/message/a_mail.html" nullmsg=" " errormsg=" "></td>
+                <td width="60%"><div class="Validform_checktip">请输入您常用的邮箱</div></td>
+              </tr>
+              <tr>
+                <td height="35" align="right"><span class="c_ff0103">*</span>密码：</td>
+                <td height="35" colspan="2" ><input type="password" value="" name="password" class="table_text" datatype="*6-16" nullmsg=" " errormsg=" "></td>
+                <td width="60%"><div class="Validform_checktip">密码范围在6~16位之间,空格无效</div></td>
+              </tr>
+              <tr>
+                <td height="35" align="right"><span class="c_ff0103">*</span>确认密码：</td>
+                <td height="35" colspan="2" ><input type="password" value="" name="verifypwd" class="table_text" datatype="*" recheck="password" nullmsg=" " errormsg=" "></td>
+                <td width="60%"><div class="Validform_checktip">请再次输入密码</div></td>
+              </tr>
+              <tr>
+                <td height="35" align="right"><span class="c_ff0103">*</span>昵称：</td>
+                <td height="35" colspan="2" ><input type="text" value="" name="user_name" class="table_text" datatype="s4-8"  nullmsg=" " errormsg=" "></td>
+                <td width="60%"><div class="Validform_checktip">昵称至少1个字符,最多8个字符</div></td>
+              </tr>
+              <tr>
+                <td height="35" align="right"><span class="c_ff0103">*</span>验证码：</td>
+                <td width="6%"><img src="/message/code.html" alt=""  id="i_ajx" /></td>
+                <td width="15%" height="35"><input name="v_code" type="text" class="table_text" style="width:80px; height:28px;" ajaxurl="/message/a_code.html"  datatype="p"  nullmsg=" " errormsg=" "/></td>
+                <td width="60%"><div class="Validform_checktip"></div></td>
+				<script>
+				$('#i_ajx').click(function(){
+					$(this).attr('src',"/message/code/"+Math.round(Math.random()*10)+".html");
+				})
+				</script>
+              </tr>
+              <tr>
+                <td height="50" align="right" valign="bottom">&nbsp;</td>
+                <td height="50" colspan="2"  valign="bottom"><input name="" type="submit" class="table_button" value="注 册" /></td>
+                <td width="60%"></td>
+              </tr>
+            </table>
+          </form>
+          <script src="/Tpl/Default/js/form.js"></script>
+         </div>
+         <div class="login_right">
+           <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">
+              <tr>
+                <td height="30" colspan="2" valign="top">已有账号？直接登录</td>
+              </tr>
+              <tr>
+                <td height="60" colspan="2" valign="top"><input name="" type="button" class="login_button" value="" onclick='window.location.href="/user/index.html"' /></td>
+              </tr>
+              <tr>
+                <td height="30" colspan="2"><strong>已有账号登录</strong></td>
+              </tr>
+
+              <tr>
+                <td height="30"><img src="/Tpl/Default/images/qqq.jpg" /></td>
+                <td height="30"><a href="/api/qq.html">QQ账号</a></td>
+              </tr>
+              <tr>
+              </tr>
+            </table>
+         </div>
+         <div class="clear"></div>
+       </div>
+     </div>
+   </div>
+  </div>
+   <div id="footer">
+    <div class="blogroll">官方链接：<a target="_blank" href="http://www.microsoft.com/zh-cn/default.aspx">微软中国</a>|<a target="_blank" href="http://www.trainsfer.com/">北京传翼四方科技发展有限公司</a>|<a target="_blank" href="http://www.cnkinect.com/">cnKinect</a></div>
+    <p>
+	Copyright&nbsp;©2013 k4w.cn版权所有并保留所有最终解释权（All Rights Reserved） <span style="text-align:center;widows:2;text-transform:none;background-color:#fcfcfc;text-indent:0px;display:inline !important;font:12px/30px 宋体;white-space:normal;orphans:2;float:none;letter-spacing:normal;color:#474747;word-spacing:0px;-webkit-text-size-adjust:auto;-webkit-text-stroke-width:0px;"><a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备12043084号-2</a></span> 技术支持 : <a href="http://www.trainsfer.com/" target="_blank">北京传翼四方科技发展有限公司</a> 
+</p>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cdiv id='cnzz_stat_icon_1000033781'%3E%3C/div%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000033781' type='text/javascript'%3E%3C/script%3E"));</script>
+<span style="display:none;" id="zdcms_kindeditor_bookmark_end_66zdcms_"></span> 
+<p>
+	<br />
+</p>  </div>
+</div>
+</body>
+</html>
+
